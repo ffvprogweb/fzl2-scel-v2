@@ -22,9 +22,11 @@ class REQ02ConsultarLivroTests {
 		// Dado – que o livro está cadastrado
 		repository.deleteAll();
 		Livro livro = new Livro("3333", "Teste de Software", "Delamaro");
+		System.out.println(livro.toString());
 		repository.save(livro);
 		// Quando – o usuário consulta o livro pelo isbn
 		Livro ro = repository.findByIsbn("3333");
+		System.out.println(ro.toString());
 		// Então – o livro fique disponivel para consulta e emprestimo
 		assertThat(ro).isEqualTo(livro);
 	}
