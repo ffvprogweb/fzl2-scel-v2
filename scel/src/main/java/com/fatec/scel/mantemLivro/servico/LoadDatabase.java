@@ -19,6 +19,7 @@ class LoadDatabase {
     return args -> {
       log.info("Preloading " + repository.save(new Livro("1111", "Engenharia de Software","Pressman")));
       log.info("Preloading " + repository.save(new Livro("2222", "Introdução ao Teste de Software", "Delamaro")));
+      log.info("Preloading " + repository.save(new Livro("3333", "Principios de Analise OO", "Bezerra")));
     };
   }
 }
